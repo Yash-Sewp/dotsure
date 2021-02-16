@@ -5,11 +5,13 @@
         <div class="flex items-center justify-center h-16">
           <div class="flex items-center">
             <div class="flex-shrink-0">
+              <router-link :to="`/`">
               <img
                 class="w-24 md:w-auto"
                 src="../assets/images/logo_light.39e67d5a.svg"
                 alt="Workflow"
               />
+              </router-link>
             </div>
             <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
