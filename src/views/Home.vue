@@ -31,21 +31,21 @@
                     <router-link :to="`/post/${posts[0].id}`">
                         <div class="block xl:flex items-center justify-start">
                             <div v-if="posts.image">
-                                <img
+                                <!-- <img
                                     src="`${posts.image}`"
                                     class="w-full max-h-96 xl:w-2/3 xl:h-1/5 p-3"
                                     alt=""
-                                />
+                                /> -->
                             </div>
                             <div v-else>
                                 <img
                                     src="https://dummyimage.com/1920x1080/#fff"
-                                    class="w-full max-h-96 xl:w-2/3 xl:h-1/5 p-3"
+                                    class="w-full max-h-96 xl:h-1/5 p-3"
                                     alt=""
                                 />
                             </div>
                             <div
-                                class="context-box w-full xl:w-1/3 pl-2 xl:pl-1 pb-6"
+                                class="context-box w-full xl:w-2/3 pl-2 xl:pl-1 pb-6"
                             >
                                 <div
                                     class="small-block p-1 w-20 text-xs ml-2 mb-3 rounded-md border-2 border-black"
