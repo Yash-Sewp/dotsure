@@ -2,12 +2,12 @@
   <main class="bg-white">
     <Nav class="mb-6 fixed" />
     <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-      <div class="post-container pt-20">
-        <h1 class="text-4xl text-left mb-10">{{ post.title }}</h1>
+      <div class="post-container py-20 my-10">
+        <h1 class="text-4xl text-left mb-10 capitalize">{{ post.title }}</h1>
         <div class="img-container w-full">
           <img src="https://dummyimage.com/1920x1080/#fff" alt="placeholder" />
         </div>
-        <p class="text-lg">{{ post.body }}</p>
+        <p class="text-lg mt-10 text-lg text-left">{{ post.body }}</p>
       </div>
     </div>
   </main>

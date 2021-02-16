@@ -1,11 +1,23 @@
 <template>
   <div class="home">
     <Nav class="mb-6 fixed" />
-    <header class="bg-white pt-20 shadow">
-      <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-        <h1 class="text-3xl font-bold leading-tight text-gray-900">
+    <header class="bg-gray-900 py-16 mx-auto w-full">
+      <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
+        <h1 class="font-semibold text-white text-left pt-10 pb-3 text-4xl mb-2">
           Posts
         </h1>
+        <p class="text-lg text-white text-left ">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <div class="mt-1 flex rounded-md shadow-sm">
+          <input
+            type="text"
+            name="Search"
+            id="search_something"
+            class="flex block w-full rounded-md sm:text-sm py-4 px-5 mt-8"
+            placeholder="Search"
+          />
+        </div>
       </div>
     </header>
     <main class="bg-gray-100">
@@ -61,11 +73,13 @@
           </div>
         </div>
         <!-- /End replace -->
-        <div class="pagination mt-10">
+        <div class="pagination mt-10 flex justify-center">
           <jw-pagination
             :items="posts"
             @changePage="onChangePage"
             :labels="customLabels"
+            :disableDefaultStyles="true"
+            :styles="customStyles"
           ></jw-pagination>
         </div>
       </div>
@@ -76,12 +90,30 @@
 <script>
 // @ is an alias to /src
 import Nav from '@/components/Nav.vue';
-
 const axios = require('axios').default;
 
 const customLabels = {
   previous: '<',
-  next: '>'
+  next: '>',
+  first: '<<',
+  last: '>>'
+};
+
+const customStyles = {
+  ul: {
+    display: 'flex'
+  },
+  li: {
+    display: 'block',
+    padding: '10px 15px ',
+    margin: '20px 5px',
+    border: '1px solid #bdc3ca',
+    borderRadius: '4px',
+    cursor: 'pointer'
+  },
+  a: {
+    color: 'black'
+  }
 };
 
 export default {
@@ -93,7 +125,8 @@ export default {
     return {
       posts: [],
       pageOfItems: [],
-      customLabels
+      customLabels,
+      customStyles
     };
   },
   mounted() {
