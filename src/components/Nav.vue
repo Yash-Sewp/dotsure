@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <nav class="bg-white mt-2">
+  <div class="w-full">
+    <nav class="bg-white py-2 items-center shadow">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-center h-16">
           <div class="flex items-center">
@@ -14,35 +14,19 @@
             <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a
-                  href="#"
-                  class="text-black px-3 py-2 rounded-md text-sm font-light"
+                <a href="#" class="text-black font-bold px-2 text-sm"
                   >About Us</a
                 >
 
-                <a
-                  href="#"
-                  class="text-black px-3 py-2 rounded-md text-sm font-light"
-                  >Pet</a
-                >
+                <a href="#" class="text-black font-bold px-2 text-sm">Pet</a>
 
-                <a
-                  href="#"
-                  class="text-black px-3 py-2 rounded-md text-sm font-light"
-                  >Car</a
-                >
+                <a href="#" class="text-black font-bold px-2 text-sm">Car</a>
 
-                <a
-                  href="#"
-                  class="text-black px-3 py-2 rounded-md text-sm font-light"
+                <a href="#" class="text-black font-bold px-2 text-sm"
                   >Business</a
                 >
 
-                <a
-                  href="#"
-                  class="text-black px-3 py-2 rounded-md text-sm font-light"
-                  >Blog</a
-                >
+                <a href="#" class="text-black font-bold px-2 text-sm">Blog</a>
               </div>
             </div>
           </div>
@@ -94,6 +78,6 @@
 
 <script>
 export default {
-  name: "Nav"
+  name: 'Nav'
 };
 </script>
